@@ -1,5 +1,11 @@
 # 小六壬算内裤 🔮
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/xiaoliu-underwear-divination)
+[![Next.js](https://img.shields.io/badge/Next.js-14-black)](https://nextjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)](https://www.typescriptlang.org/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3-38B2AC)](https://tailwindcss.com/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 > 传承千年智慧，探知今日运势  
 > 基于中国传统小六壬术数的创新 AI 网站
 
@@ -209,11 +215,46 @@ xiaoliu-underwear-divination/
 
 ## 🚀 部署指南
 
-### Vercel 部署（推荐）
+### 一键部署到 Vercel（推荐）
 
-1. 将代码推送到 GitHub
-2. 连接 Vercel 账户
-3. 导入项目并自动部署
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/your-username/xiaoliu-underwear-divination)
+
+### 手动部署步骤
+
+#### 方法一：GitHub + Vercel Dashboard
+```bash
+# 1. 推送代码到 GitHub
+git add .
+git commit -m "feat: 小六壬算内裤网站"
+git push origin main
+
+# 2. 访问 vercel.com 导入项目
+# 3. 项目自动检测配置并部署
+```
+
+#### 方法二：Vercel CLI
+```bash
+# 1. 安装并登录 Vercel CLI
+npm install -g vercel
+vercel login
+
+# 2. 部署到生产环境
+vercel --prod
+```
+
+#### 方法三：使用部署脚本
+```bash
+# 运行自动化部署脚本
+npm run deploy
+```
+
+### 部署配置文件
+
+项目已包含完整的部署配置：
+- `vercel.json` - Vercel 部署配置
+- `next.config.js` - Next.js 优化配置
+- `.vercelignore` - 部署时忽略的文件
+- 详细指南请查看 [`DEPLOYMENT.md`](./DEPLOYMENT.md)
 
 ### 其他部署平台
 
