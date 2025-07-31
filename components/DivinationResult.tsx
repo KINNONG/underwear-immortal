@@ -52,6 +52,7 @@ export default function DivinationResult({ result, userName, onReset, onBackToHo
           text: `我今天的幸运颜色是${result.colors[0]}！快来试试小六壬算内裤吧～`,
           url: window.location.href
         });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         console.log('分享被取消');
       }

@@ -8,9 +8,10 @@ const nextConfig = {
     domains: [],
     formats: ['image/webp', 'image/avif'],
   },
-  experimental: {
-    optimizeCss: true,
-  },
+  // 暂时移除实验性功能避免构建错误
+  // experimental: {
+  //   optimizeCss: true,
+  // },
   env: {
     CUSTOM_KEY: 'xiaoliu-underwear-divination',
   },

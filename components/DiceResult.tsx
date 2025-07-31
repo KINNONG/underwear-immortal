@@ -60,6 +60,7 @@ export default function DiceResult({ result, dice, onReset, onBackToHome }: Dice
           text: `我投出了${dice.join('-')}，算出内裤颜色是${result.finalColor.name}！快来试试小六壬算内裤吧～`,
           url: window.location.href
         });
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (err) {
         console.log('分享被取消');
       }

@@ -113,9 +113,9 @@ export const LiuRenGodConfig = {
   }
 };
 
-// 天干地支
-const TianGan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
-const DiZhi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
+// 天干地支 (暂时保留供将来扩展使用)
+// const TianGan = ['甲', '乙', '丙', '丁', '戊', '己', '庚', '辛', '壬', '癸'];
+// const DiZhi = ['子', '丑', '寅', '卯', '辰', '巳', '午', '未', '申', '酉', '戌', '亥'];
 
 /**
  * 计算小六壬结果
@@ -279,7 +279,7 @@ export function calculateUnderwearColorByDice(
   const threePositions = getDicePositions(dice1, dice2, dice3);
   
   // 3. 获取三个宫位对应的六神和颜色
-  const threeGods = threePositions.map((position, index) => {
+  const threeGods = threePositions.map((position, _index) => {
     const god = LiuRenClockwiseOrder[position - 1];
     const colorInfo = UnderwearColors[god];
     return {
@@ -382,7 +382,7 @@ function mixThreeColors(colors: Array<{rgb: [number, number, number], name: stri
 /**
  * 根据RGB值生成颜色名称
  */
-function generateColorName(rgb: [number, number, number], sourceColors: string[]): string {
+function generateColorName(rgb: [number, number, number], _sourceColors: string[]): string {
   const [r, g, b] = rgb;
   
   // 根据RGB值判断主要色调
@@ -431,9 +431,9 @@ function generateColorDescription(rgb: [number, number, number], sourceColors: s
  */
 function generateUnderwearInterpretation(
   threeGods: Array<{god: LiuRenGod, position: number, color: string}>,
-  dice1: number,
-  dice2: number, 
-  dice3: number
+  _dice1: number,
+  _dice2: number, 
+  _dice3: number
 ): string {
   const godNames = threeGods.map(g => g.god).join('、');
   const colors = threeGods.map(g => g.color).join('与');
